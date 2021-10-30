@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   itemWrap: {
-    height: Dimensions.get('window').width / 0.6,
+    height: Dimensions.get('window').height / 1.25,
     backgroundColor: '#FADBD8',
     marginTop: 10,
   },

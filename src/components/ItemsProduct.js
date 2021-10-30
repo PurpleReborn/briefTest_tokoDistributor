@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     paddingVertical: 5,
+    color: '#566573',
   },
   img: {
     width: Dimensions.get('window').width / 2.2,
@@ -89,5 +90,6 @@ const styles = StyleSheet.create({
   },
   loc: {
     fontSize: 14,
+    color: '#566573',
   },
 });

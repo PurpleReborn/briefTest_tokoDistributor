@@ -13,6 +13,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import Home from './src/screens/Home';
 import Product from './src/screens/Product';
+import Splash from './src/screens/Splash';
 
 const Stack = createStackNavigator();
 
@@ -20,14 +21,13 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen
+        <Stack.Screen
           component={Splash}
           name="splash"
           options={{
-            header: Header,
-            headerTransparent: true,
+            headerShown: false,
           }}
-        /> */}
+        />
         <Stack.Screen
           component={Home}
           options={{
