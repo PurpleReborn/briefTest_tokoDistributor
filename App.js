@@ -12,7 +12,6 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import Home from './src/screens/Home';
-import Category from './src/screens/Category';
 import Product from './src/screens/Product';
 
 const Stack = createStackNavigator();
@@ -35,13 +34,6 @@ const App = () => {
             headerShown: false,
           }}
           name="home"
-        />
-        <Stack.Screen
-          component={Category}
-          options={{
-            headerShown: false,
-          }}
-          name="category"
         />
         <Stack.Screen
           component={Product}

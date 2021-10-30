@@ -1,6 +1,12 @@
 const initialState = {
   data: [],
+  dataPagination: [],
   message: '',
+  pageInfo: {},
+  data2: [],
+  category: [],
+  errMsg: '',
+  sccMsg: '',
 };
 
 const items = (state = initialState, action) => {
@@ -14,7 +20,33 @@ const items = (state = initialState, action) => {
     case 'GET_ITEM_BANNER_FAILED': {
       return {
         ...state,
-        message: action.payload,
+        message: action.payload.code_message,
+      };
+    }
+    case 'GET_ITEM_PAGINATION': {
+      return {
+        ...state,
+        // dataPagination: [...state.dataPagination, ...action.payload.data],
+        dataPagination: action.payload.data,
+        pageInfo: action.payload.meta,
+      };
+    }
+    case 'GET_ITEM_PAGINATION_FAILED': {
+      return {
+        ...state,
+        errMsg: action.payload.code_message,
+      };
+    }
+    case 'GET_CATEGORY': {
+      return {
+        ...state,
+        category: action.payload,
+      };
+    }
+    case 'GET_CATEGORY_FAILED': {
+      return {
+        ...state,
+        errMsg: action.payload.code_message,
       };
     }
     default: {
